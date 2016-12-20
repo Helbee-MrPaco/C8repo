@@ -44,7 +44,7 @@ let Height = 32
 let WindowWidth = (Width * PixelWidth) + 24
 let WindowHeight = (Height * PixelHeight) + 39
 let Random = new System.Random()
-let green, black = new SolidBrush(Color.Green), new SolidBrush(Color.Black)
+let green, black = new SolidBrush(Color.Red), new SolidBrush(Color.White)
 let mutable rect = new Rectangle(0, 0, PixelWidth, PixelHeight)
 let screen = new Form(Width = WindowWidth, 
                       Height = WindowHeight,
@@ -55,7 +55,7 @@ let gfx = screen.CreateGraphics()
 let Memory = 4096
 
 [<Literal>]
-let RomStart = 512
+let RomStart = 1024
     
 /// System memory
 let mutable RAM = Array.create Memory 0uy
